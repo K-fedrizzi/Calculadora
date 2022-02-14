@@ -13,6 +13,7 @@ public class Calculadora extends JFrame{
 		organizarLayout();
 		
 		setSize(335,540);           // Definir o tamanho da caluladora
+		//setUndecorated(true); // pata tirar a barra de cima da aplicacao
 		setDefaultCloseOperation(EXIT_ON_CLOSE); // Fechar a aplicação sair mata processo 
 		setLocationRelativeTo(null);     		//para abrir a aplicação no centro da tela
 		setVisible(true); // Tela ficar visivel
