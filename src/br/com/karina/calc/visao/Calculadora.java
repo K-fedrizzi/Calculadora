@@ -23,7 +23,7 @@ public class Calculadora extends JFrame{
 		setLayout(new BorderLayout());
 		
 		Display display = new Display();
-		display.setPreferredSize(new Dimension(330, 190));  // para definir o tamanho da tela 
+		display.setPreferredSize(new Dimension(130, 190));  // para definir o tamanho da tela 
 		add(display, BorderLayout.NORTH );   // Para definir a posição da tela do display
 		
 		Teclado teclado = new Teclado();

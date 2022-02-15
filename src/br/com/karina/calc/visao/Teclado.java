@@ -10,6 +10,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
+import br.com.karina.calc.modelo.Memoria;
+
 @SuppressWarnings("serial")
 public class Teclado extends JPanel  implements ActionListener{
 
@@ -32,13 +34,12 @@ public class Teclado extends JPanel  implements ActionListener{
 		c.fill = GridBagConstraints.BOTH; // tira espaços em brancos
 		
 		// Linha 1
-		
-		adicionarBotao("C", COR_CINZA_ESCURO, c, 0, 0);
 		c.gridwidth = 2;
-		adicionarBotao("CE", COR_CINZA_ESCURO, c, 1, 0);
-		//adicionarBotao("C", COR_CINZA_ESCURO, c, 2, 0);
+		adicionarBotao("CE", COR_CINZA_ESCURO, c, 0, 0);
 		c.gridwidth = 1;
+		adicionarBotao("±", COR_CINZA_ESCURO, c, 2, 0);
 		adicionarBotao("/", COR_CINZA_ESCURO, c, 3, 0);
+		
 		// Linha 2
 		adicionarBotao("7", COR_CINZA_CLARO, c, 0, 1);
 		adicionarBotao("8", COR_CINZA_CLARO, c, 1, 1);
@@ -130,7 +131,8 @@ public class Teclado extends JPanel  implements ActionListener{
 		// para pegar resultado executado
 		if(e.getSource() instanceof JButton) {
 			JButton botao  = (JButton) e.getSource();
-			System.out.println(botao.getText());
+			Memoria.getInstancia().processarComando(botao.getText()); // processamento dos botoes
+			//System.out.println(botao.getText());
 		}
 		
 		
